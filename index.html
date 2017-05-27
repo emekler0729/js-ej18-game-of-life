@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <p>Conway's Game of Life is a simple simulation that creates artificial 'life' on a grid, each cell of which is
+    either alive or not. Each generation (turn), the following rules are applied:</p>
+    <ul>
+        <li>Any live cell with fewer than two or more than three live neighbors dies.</li>
+        <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+        <li>Any dead cell with exactly three live neighbors becomes a live cell.</li>
+    </ul>
+    <p>A neighbor is defined as any adjacent cell, including diagonally adjacent ones.</p>
+    <p>Note that these rules are applied to the whole grid at once, not one square at a time. That means the
+    counting of neighbors is based on the situation at the start of the generation, and changes happening to
+    neighbor cells during this generation should not influence the new state of a given cell.</p>
+    <p>When the user checks or unchecks the checkboxes, their changes should be included when computing the next
+    generation.</p>
+    <h2>Simulation</h2>
+    <div id="simulation"></div>
+    <br>
+
+    <script src="code/golsim.js"></script>
+    <script>
+        var seed = randomSeed(50, 20);
+        var sim = new Simulation(seed, 'simulation');
+    </script>
+</body>
+</html>
